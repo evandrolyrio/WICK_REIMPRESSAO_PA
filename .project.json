@@ -35,10 +35,15 @@
     "blockPushLevel": "Error"
   },
   "build": {
-    "buildRequired": true,
+    "buildRequired": false,
     "sourceFolder": "webapp",
     "targetFolder": "dist",
     "excludedFolders": [],
-    "excludedFiles": []
+    "excludedFiles": [],
+    "lastBuildDateTime": "Tue, 22 Nov 2022 18:07:45 GMT"
+  },
+  "deploy": {
+    "destination": "SFD",
+    "name": "Z_REIMPRESSAOPA"
   }
 }

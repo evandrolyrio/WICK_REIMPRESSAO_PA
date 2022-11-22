@@ -68,7 +68,7 @@ sap.ui.define([
 		},		
 		Imprimir: function(oEvent) {
 			var oTable = this.getView().byId("tbReimpressao");
-			var oSelected = oTable.getSelectedItems()[0].oBindingContexts.viewModel.getObject();
+			// var oSelected = oTable.getSelectedItems()[0].oBindingContexts.viewModel.getObject();
 			var items = oTable.getSelectedItems().length;
 			var oModel = this.getModel();
 			var that = this;
