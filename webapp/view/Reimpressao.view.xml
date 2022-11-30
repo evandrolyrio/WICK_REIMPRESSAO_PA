@@ -1,13 +1,14 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="reimpressao.paZPP_REIMPRESSAO_PA.controller.Reimpressao"
-	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:semantic="sap.f.semantic" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:semantic="sap.f.semantic" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout" height="100%">
 	<semantic:SemanticPage id="mySemanticPage" headerPinnable="true" toggleHeaderOnTitleClick="false" headerExpanded="true" showFooter="false"
-		preserveHeaderStateOnScroll="false">
+		preserveHeaderStateOnScroll="false" fitContent ="true">
 		<semantic:headerContent>
 			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" singleContainerFullSize="true" labelSpanXL="4" labelSpanL="3" labelSpanM="12"
 				labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1">
 				<Toolbar>
 					<ToolbarSpacer/>
 					<Button text="Imprimir Etiqueta" icon="sap-icon://print" press="Imprimir"/>
+					
 				</Toolbar>
 			</form:SimpleForm>
 		</semantic:headerContent>
@@ -16,36 +17,37 @@
 				<content>
 					<Table id="tbReimpressao" class="custom_table" inset="false" items="{path: 'viewModel>/ReimpressaoSet', parameters : { count: true } }"
 						busy="{viewModel>/busy}" mode="MultiSelect"> 
+						
 						<columns>
 							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
-								<Text text="Nº Etiqueta"/>
+								<Text text="Nº Etiqueta" wrapping="false"/>
 							</Column>
 							<Column demandPopin="true">
-								<Text text="Centro"/>
+								<Text text="Centro" wrapping="false"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Ordem"/>
+							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Ordem" wrapping="false"/>
 							</Column>								
 							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
-								<Text text="Material" wrapping="true"/>
+								<Text text="Material" wrapping="false"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Lote"/>
+							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Lote" wrapping="false"/>
 							</Column>
-							<Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Qtd teórica"/>
+							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Qtd teórica" wrapping="false"/>
 							</Column>
-						    <Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Flag Impresso"/>
+						    <Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Flag Impresso" wrapping="false"/>
 							</Column>								
-							<Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Data Impressao"/>
+							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Data Impressao" wrapping="false"/>
 							</Column>	
-							<Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Hora"/>
+							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Hora" wrapping="false"/>
 							</Column>	
-							<Column demandPopin="true" minScreenWidth="Desktop" popinDisplay="Inline">
-								<Text text="Usuário"/>
+							<Column minScreenWidth="Desktop" demandPopin="true" popinDisplay="Inline">
+								<Text text="Usuário" wrapping="false"/>
 							</Column>	
 						</columns>
 						<items>
