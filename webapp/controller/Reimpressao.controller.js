@@ -20,6 +20,13 @@ sap.ui.define([
 				Peso: ""
 			}), "viewModel");
 			var that = this;
+			this.getModel().metadataLoaded().then(function() {
+				that.getModel().read("/ImpressoraSet", {
+					success: function(oData) {
+						that.getModel("viewModel").setProperty("/ImpressoraSet", oData.results);
+					}
+				});
+			});			
 			// this._currentContext = this.getSource().getBindingContext();
 			this.oDialog = new sap.ui.xmlfragment("reimpressao.paZPP_REIMPRESSAO_PA.view.fragment.DisplayReimpDialog", this);
 			if (this.oDialog) {
@@ -73,6 +80,7 @@ sap.ui.define([
 			var oModel = this.getModel();
 			var that = this;
 			that.getModel("viewModel").setProperty("/busy", true);
+			var oData = this.getModel("viewModel").getData();
 			for (var i = 0; i < items; i++) {
 
 				var item = oTable.getSelectedItems()[i].oBindingContexts.viewModel.getObject();
@@ -81,7 +89,8 @@ sap.ui.define([
 				oModel.callFunction("/ReimprimeEtiqueta", {
 					method: "GET",
 					urlParameters: {
-						Zetiqid: item.Zetiqid
+						Zetiqid: item.Zetiqid,
+						Impressora: oData.Impressora
 					},
 					success: function(oData) {
 						that.getModel("viewModel").setProperty("/busy", false);
