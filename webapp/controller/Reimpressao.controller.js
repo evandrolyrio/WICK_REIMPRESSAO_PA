@@ -72,6 +72,12 @@ sap.ui.define([
 					that.getModel("viewModel").setProperty("/busy", false);
 				}
 			});
+		},	
+		onChangeImpressora: function(oEvent) {
+			var oViewModel = this.getModel("viewModel");
+			var sData = oEvent.getParameter("selectedItem").getBindingContext().getObject().Id_impressora;
+			oViewModel.setProperty("/Impressora", sData);
+
 		},		
 		Imprimir: function(oEvent) {
 			var oTable = this.getView().byId("tbReimpressao");
