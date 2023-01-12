@@ -97,7 +97,7 @@ sap.ui.define([
 					urlParameters: {
 						Zetiqid: item.Zetiqid,
 						Impressora: oData.Impressora,
-						Gamng: Zetiqid: item.Gamng
+						Gamng: item.Gamng
 					},
 					success: function(oData) {
 						that.getModel("viewModel").setProperty("/busy", false);
