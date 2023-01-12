@@ -66,7 +66,8 @@
 									<Text text="{viewModel>Aufnr}"/>									
 									<ObjectIdentifier title="{viewModel>Matnr}"/>
 									<Text text="{viewModel>Charg}"/>
-									<ObjectIdentifier title="{viewModel>Gamng}" text="{viewModel>Gmein}"/>
+									<!--<ObjectIdentifier title="{viewModel>Gamng}" text="{viewModel>Gmein}"/>-->
+									<Input value="{viewModel>Gamng}" type="{Text}" fieldWidth="{60%}" editable="true"/>
 									<Text text="{viewModel>Zetiqim}"/>
 									<Text text="{path: 'viewModel>Zdataim', formatOptions:{ pattern: 'dd/MM/yyyy', UTC: true } }"/>
 									<Text text="{viewModel>Zhoraim}"/>
